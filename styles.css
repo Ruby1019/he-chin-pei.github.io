@@ -78,6 +78,29 @@ a {
   color: var(--foreground);
 }
 
+.language-toggle {
+  min-height: 38px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(47, 41, 37, 0.22);
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0 14px;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.language-toggle:hover {
+  border-color: var(--ink);
+  background: #f3ebe2;
+  transform: translateY(-1px);
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
@@ -534,13 +557,20 @@ h3 {
 @media (max-width: 720px) {
   .site-header {
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .nav-links {
+    order: 3;
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 6px 14px;
     font-size: 0.84rem;
+  }
+
+  .language-toggle {
+    margin-left: auto;
   }
 
   h1 {
