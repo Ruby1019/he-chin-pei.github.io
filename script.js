@@ -22,7 +22,7 @@ const translations = {
     "facts.education.detail": "M.S. Information Management, expected Jun. 2026",
     "facts.identifiers.term": "Identifiers",
     "facts.identifiers.detail":
-      "ORCID: 0009-0004-8913-9179<br />Web of Science: PLC-4893-2026",
+      '<a href="https://orcid.org/0009-0004-8913-9179" target="_blank" rel="noreferrer">ORCID: 0009-0004-8913-9179</a><br />Web of Science: PLC-4893-2026',
     "facts.email.term": "Email",
     "about.eyebrow": "Profile",
     "about.heading": "Building transparent AI decision support for real workflows.",
@@ -105,7 +105,9 @@ const translations = {
     "contact.copy":
       "I am preparing for future doctoral study and hope to continue developing rigorous research skills in data science, machine learning, statistics, AI governance, and interdisciplinary decision support.",
     "contact.email": "Email",
-    "contact.top": "Back to top",
+    "contact.github": "GitHub",
+    "contact.orcid": "ORCID",
+    "floating.top": "Back to top",
   },
   zh: {
     "nav.about": "關於我",
@@ -129,7 +131,7 @@ const translations = {
     "facts.education.detail": "資訊管理碩士，預計 2026 年 6 月畢業",
     "facts.identifiers.term": "研究識別",
     "facts.identifiers.detail":
-      "ORCID: 0009-0004-8913-9179<br />Web of Science: PLC-4893-2026",
+      '<a href="https://orcid.org/0009-0004-8913-9179" target="_blank" rel="noreferrer">ORCID: 0009-0004-8913-9179</a><br />Web of Science: PLC-4893-2026',
     "facts.email.term": "Email",
     "about.eyebrow": "簡介",
     "about.heading": "為真實工作流程建立透明的 AI 決策支援。",
@@ -211,7 +213,9 @@ const translations = {
     "contact.copy":
       "我正在準備未來博士班申請，期待持續深化資料科學、機器學習、統計、AI 治理與跨領域決策支援的研究能力。",
     "contact.email": "寄信聯絡",
-    "contact.top": "回到頂端",
+    "contact.github": "GitHub",
+    "contact.orcid": "ORCID",
+    "floating.top": "回到頂端",
   },
 };
 
@@ -300,7 +304,9 @@ const bindings = [
   ["contact.heading", "#contact h2"],
   ["contact.copy", "#contact p:not(.eyebrow)"],
   ["contact.email", '#contact a[href^="mailto:"]'],
-  ["contact.top", '#contact a[href="#top"]'],
+  ["contact.github", '#contact a[href^="https://github.com"]'],
+  ["contact.orcid", '#contact a[href^="https://orcid.org"]'],
+  ["floating.top", ".floating-top"],
 ];
 
 function applyLanguage(language) {
